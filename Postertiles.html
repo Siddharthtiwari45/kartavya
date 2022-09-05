@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartavaya</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+</head>
+<style>
+    * {
+        margin: 100;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    /* .header{
+        background: rgb(54, 42, 42);
+    } */
+    body {
+        font-family: 'Poppins', sans-serif;
+        /* font-family: 'Sigmar One', cursive; */
+        /* background: radial-gradient(#fff, #ffd6d6); */
+        background: white;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar a:hover {
+        background: #ddd;
+        color: black;
+    }
+
+    nav {
+        flex: 1;
+        text-align: right;
+    }
+
+    nav ul {
+        display: inline-block;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #555;
+    }
+
+    p {
+        color: #555;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .col-2 {
+        flex-basis: 50%;
+        min-width: 300px;
+    }
+
+    .col-2 img {
+        max-width: 75%;
+        padding: 50px 0px;
+    }
+
+    .col-2 h1 {
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0;
+    }
+
+    .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #ff523b;
+        color: #fff;
+        padding: 8px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        /* transition: background 0.5s; */
+    }
+
+    .btn:hover {
+        background: #563434;
+    }
+
+
+
+    /* .header .row {
+        margin-top: 70px;
+    } */
+    .header .row {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    .categories {
+        margin: 70px 0;
+    }
+
+
+    .col-3 {
+        flex-basis: 30%;
+        min-width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .col-3 img {
+        width: 100%;
+    }
+
+    .small-container {
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .col-4 {
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transition: transform 0.5s;
+    }
+
+    /* col-5 */
+    .col-5 {
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transition: transform 0.5s;
+
+    }
+
+    .col-5 p {
+        font-size: 14px;
+
+    }
+
+    .col-5:hover {
+        transform: translate(-5px);
+    }
+
+    .col-4 img {
+        width: 100%;
+
+    }
+
+    .tittle {
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+    }
+
+    .tittle::after {
+        content: '';
+        background: #ff523b;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    h4 {
+        color: #555;
+        font-weight: normal;
+    }
+
+    .col-4 p {
+        font-size: 14px;
+
+    }
+
+    .rating .fa {
+        color: #ff523b;
+    }
+
+    .col-4:hover {
+        transform: translate(-5px);
+    }
+
+    .offer {
+        background: radial-gradient(#fff, #ffd6d6);
+        margin-top: 80px;
+        padding: 30px 0;
+    }
+
+    .col-2 .offer-img {
+        padding: 50px;
+    }
+
+    .small {
+        color: #563434;
+    }
+
+    .card-body shadow .mb-20 {
+        padding: auto;
+    }
+    .col-3 h3, .col-3 h4 {
+    font-size: 12px;
+}
+
+    /* footer */
+    .footer {
+        /* background: rgb(177, 23, 23); */
+        background: #fff;
+
+        color: #8a8a8a;
+        font-size: 14px;
+        padding: 60px 0 20px;
+    }
+
+    .footer p {
+        color: #8a8a8a;
+    }
+
+    .footer h3 {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4,
+    .footer-col-5 {
+
+        min-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-1 {
+        flex-basis: 30%;
+    }
+
+    .footer-col-2 {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer-col-2 img {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-3 {
+        flex-basis: 30%;
+    }
+
+    .footer-col-2 img {
+        width: 180px;
+        margin-bottom: 20px;
+        max-width: 75%;
+        padding: 50px 0px;
+    }
+
+    .footer-col-3,
+    .footer-col-4 {
+        flex-basis: 12%;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .app-logo {
+        margin-top: 20px;
+    }
+
+    .app-logo img {
+        width: 140px;
+    }
+
+    .footer hr {
+        border: none;
+        background: #b5b5b5;
+        height: 1px;
+        margin: 20px 0;
+    }
+
+
+    .copyright {
+        text-align: center;
+        color: #e7e7e7;
+        background-color: #141414;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* all products */
+    .row-2 {
+        justify-content: space-between;
+        margin: 100px auto 50px;
+    }
+
+    .menu-icon {
+        width: 28px;
+        margin-left: 20px;
+        display: none;
+    }
+
+    /* media query for menu */
+    @media only screen and (max-width: 800px) {
+        nav ul {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: #333;
+            width: 100px;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+
+        nav ul li {
+            display: block;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+        }
+
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    /* media query for less than 600 screen size */
+    @media only screen and (max-width: 600px) {
+        .row {
+            text-align: center;
+        }
+
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5 {
+            flex-basis: 100%;
+        }
+
+    }
+
+    /* update */
+</style>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- <img src="photos/PicsArt_05-23-09.42.11.jpg" alt="" width="100px"> -->
+                    <!-- <img src="photos/PicsArt_06-27-09.14.21.jpg" alt="" width="100px"> -->
+                    <a href="index.html"> <img src="photos/Screenshot 2021-06-27 09.46.13.png" width="100px"></a>
+
+                    <!-- <h3>Kartavaya Traders</h3> -->
+                </div>
+                <h2><b>&#160 Kartavaya Traders</b></h2>
+                <nav>
+
+                    <ul id="MenuItems">
+                        </li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row row-2">
+                <!-- <h2>Bath Tiles</h2> -->
+                <h2 class="tittle">Poster Tiles</h2>
+                <select>
+                    <option>Default shorting</option>
+                    <option> Short by Price </option>
+                    <option> Short by popularity</option>
+                    <option>Short by rating</option>
+                    <option>Short by sales</option>
+                </select>
+            </div>
+            <div class="row">
+
+
+                <div class="col-3">
+
+                    <div class="card-body shadow mb-20">
+                        <div class="category_box">
+                            <div class="category_img">
+                                <img class="lazy" src="photos/posters1.jpg">
+                            </div>
+
+                            <div class="category_nme">
+                                <h3> 5037</h3>
+                                <h4>
+                                    Poster tiles <br> 600 x 1200 mm (24 x48 inch)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card-body shadow mb-20">
+                        <div class="category_box">
+                            <div class="category_img">
+                                <img class="lazy" src="photos/posters2.jpg">
+                            </div>
+                            </a>
+                            <div class="category_nme">
+                                <h3> 5038</h3>
+                                <h4>
+                                    Poster tiles <br> 600 x 1200 mm (24 x48 inch)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card-body shadow mb-20">
+                        <div class="category_box">
+                            <div class="category_img">
+                                <img class="lazy" src="photos/posters3.jpg">
+                            </div>
+
+                            <div class="category_nme">
+                                <h3> 5039</h3>
+                                <h4>
+                                    Poster tiles <br> 600 x 1200 mm (24 x48 inch)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-3">
+                    <div class="card-body shadow mb-20">
+                        <div class="category_box">
+                            <div class="category_img">
+                                <img class="lazy" src="photos/posters4.jpg">
+                            </div>
+
+                            <div class="category_nme">
+                                <h3> 5040</h3>
+                                <h4>
+                                    Poster tiles <br> 600 x 1200 mm (24 x48 inch)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-3">
+                    <div class="card-body shadow mb-20">
+                        <div class="category_box">
+                            <div class=" category_img">
+                                <img class="lazy" src="photos/posters5.jpg">
+                            </div>
+                            </a>
+                            <div class="category_nme">
+                                <h3> 5041</h3>
+
+                                <h4>
+                                    Poster tiles <br> 600 x 1200 mm (24 x48 inch)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+
+                    <div class="card-body shadow mb-20">
+                        <div class="category_box">
+                            <div class="category_img">
+                                <img class="lazy" src="photos/posters6.jpg">
+                            </div>
+                            </a>
+                            <div class="category_nme">
+                                <h3> 5042</h3>
+
+                                <h4>
+                                    Poster tiles <br> 600 x 1200 mm (24 x48 inch)
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <footer>
+                <a class="copyright" href="#">&#169; Kartavaya Traders </a>
+            </footer>
+
+        </div>
+
+</body>
+
+</html>

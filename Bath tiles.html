@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All product</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+</head>
+<style>
+    * {
+        margin: 100;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    /* .header{
+        background: rgb(54, 42, 42);
+    } */
+    body {
+        font-family: 'Poppins', sans-serif;
+        /* font-family: 'Sigmar One', cursive; */
+        /* background: radial-gradient(#fff, #ffd6d6); */
+        background: white;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav {
+        flex: 1;
+        text-align: right;
+    }
+
+    nav ul {
+        display: inline-block;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .navbar a:hover{
+         background: #ddd;
+         color: black;
+     }
+    a {
+        text-decoration: none;
+        color: #555;
+    }
+
+    p {
+        color: #555;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .col-2 {
+        flex-basis: 50%;
+        min-width: 300px;
+    }
+
+    .col-2 img {
+        max-width: 75%;
+        padding: 50px 0px;
+    }
+
+    .col-2 h1 {
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0;
+    }
+
+    .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #ff523b;
+        color: #fff;
+        padding: 8px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        /* transition: background 0.5s; */
+    }
+
+    .btn:hover {
+        background: #563434;
+    }
+
+    .header {
+        /* background: radial-gradient(#fff, #ffd6d6); */
+    }
+
+    /* .header .row {
+        margin-top: 70px;
+    } */
+    .header .row {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    .categories {
+        margin: 70px 0;
+    }
+
+    .col-3 {
+        flex-basis: 30%;
+        min-width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .col-3 img {
+        width: 100%;
+    }
+
+    .small-container {
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .col-4 {
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transition: transform 0.5s;
+    }
+
+    .col-4 img {
+        width: 100%;
+    }
+
+    .tittle {
+        text-align: center;
+        margin: 0 auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+    }
+
+    .tittle::after {
+        content: '';
+        background: #ff523b;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    h4 {
+        color: #555;
+        font-weight: normal;
+    }
+
+    .col-4 p {
+        font-size: 14px;
+
+    }
+
+    .rating .fa {
+        color: #ff523b;
+    }
+
+    .col-4:hover {
+        transform: translate(-5px);
+    }
+
+    .offer {
+        background: radial-gradient(#fff, #ffd6d6);
+        margin-top: 80px;
+        padding: 30px 0;
+    }
+
+    .col-2 .offer-img {
+        padding: 50px;
+    }
+
+    .small {
+        color: #563434;
+    }
+
+    /* footer */
+    .footer {
+        /* background: rgb(177, 23, 23); */
+        background: #fff;
+
+        color: #8a8a8a;
+        font-size: 14px;
+        padding: 60px 0 20px;
+    }
+
+    .footer p {
+        color: #8a8a8a;
+    }
+
+    .footer h3 {
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4 {
+        min-width: 250px;
+        margin-bottom: 20px;
+
+
+    }
+
+    .footer-col-1 {
+        flex-basis: 30%;
+    }
+
+    .footer-col-2 {
+        flex: 1;
+        text-align: center;
+    }
+
+    .footer-col-2 img {
+        width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .footer-col-3 {
+        flex-basis: 30%;
+    }
+
+    .footer-col-2 img {
+        width: 180px;
+        margin-bottom: 20px;
+        max-width: 75%;
+        padding: 50px 0px;
+    }
+
+    .footer-col-3,
+    ..footer-col-4 {
+        flex-basis: 12%;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .app-logo {
+        margin-top: 20px;
+    }
+
+    .app-logo img {
+        width: 140px;
+    }
+
+    .footer hr {
+        border: none;
+        background: #b5b5b5;
+        height: 1px;
+        margin: 20px 0;
+    }
+
+    .copyright {
+        color: #e7e7e7;
+        text-align: center;
+        background-color: #141414;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    /* all products */
+    .row-2 {
+        justify-content: space-between;
+        /* margin: 100px auto 50px; */
+    }
+
+    .menu-icon {
+        width: 28px;
+        margin-left: 20px;
+        display: none;
+    }
+
+    /* media query for menu */
+    @media only screen and (max-width: 800px) {
+        nav ul {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background: #333;
+            width: 100px;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+
+        nav ul li {
+            display: block;
+            margin-right: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+        }
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    /* media query for less than 600 screen size */
+    @media only screen and (max-width: 600px) {
+        .row {
+            text-align: center;
+        }
+
+        .col-2,
+        .col-3,
+        .col-4 {
+            flex-basis: 100%;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- <img src="photos/PicsArt_05-23-09.42.11.jpg" alt="" width="100px"> -->
+                    <!-- <img src="photos/154fdf2f2759676a96e9aed653082276.png" width="30px" height="30px"> -->
+                    <img src="photos/Screenshot 2021-06-27 09.46.13.png" width="100px">
+
+                </div>
+                <h2><b>&#160 Kartavaya Traders</b></h2>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="photos/154fdf2f2759676a96e9aed653082276.png" width="30px" height="30px">
+                <img src="photos/images.png" class="menu-icon " onclick="menutoggle()">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <!-- <h2>Bath Tiles</h2> -->
+            <h2 class="tittle">Bath tiles</h2>
+            <select>
+                <option>Default shorting</option>
+                <option> Short by Price </option>
+                <option> Short by popularity</option>
+                <option>Short by rating</option>
+                <option>Short by sales</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-4">
+               
+                <a href="Single product .html"> <img src="photos//images (1).jpg" alt=""></a>
+               <a href="Single product .html"> <h4>Bath tiles</h4></a>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>300 rupee</p>
+            </div>
+            <div class="col-4">
+                <img src="photos//images (2).jpg" alt="">
+                <h4>Bath tiles</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>300 rupee</p>
+            </div>
+
+            <div class="col-4">
+                <img src="photos//images (3).jpg" alt="">
+                <h4>Bath tiles</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>300 rupee</p>
+            </div>
+            <div class="col-4">
+                <img src="photos//images (4).jpg" alt="">
+                <h4>Bath tiles</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>300 rupee</p>
+            </div>
+            <div class="col-4">
+                <img src="photos//images (5).jpg" alt="">
+                <h4> Bath tiles</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>350 rupee</p>
+            </div>
+            <div class="col-4">
+                <img src="photos//images (6).jpg" alt="">
+                <h4> Bath tiles</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>400 rupee</p>
+            </div>
+            <div class="col-4">
+                <img src="photos//images (7).jpg" alt="">
+                <h4> Bath tiles</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>400 rupee</p>
+            </div>
+            <div class="col-4">
+                <img src="photos//images (8).jpg" alt="">
+                <h4> Bath tiles</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>400 rupee</p>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594</span>
+    </div>
+    </div>
+    <!-- footer -->
+    <!-- <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="footer-col-1">
+                        <h3>Download our app</h3>
+                        <p>Download our app for android and ios mobile phones</p>
+                    </div>
+                    <div class="footer-col-2"> -->
+                        <!-- <img src="photos/PicsArt_05-23-09.42.11.jpg" alt=""> -->
+                        <!-- <p>Download our app for android and ios mobile phones</p> -->
+                    <!-- </div>
+                    <div class="footer-col-3">
+                        <h3>follow us</h3>
+                        <ul>
+                            <li>facebook</li>
+                            <li>Instagram</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <footer>
+        <a class="copyright" href="#">&#169; Kartavaya Traders </a>
+    </footer>
+    <!-- single product detail -->
+    <!-- <div class="small-container">
+        <div class="row">
+            <div class="col-2">
+                <img src="photos//images (1).jpg" width="100%" alt="">
+            </div>
+            <div class="col-2">
+                <p>Home/bath tites</p>
+                <h1>product name</h1>
+                <h4>300/packet</h4>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>
